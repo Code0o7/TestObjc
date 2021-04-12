@@ -1,0 +1,6 @@
+framework module HYFramework {
+  umbrella header "HYFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}
