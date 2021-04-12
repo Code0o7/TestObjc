@@ -15,7 +15,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+}
+
+- (void)setupSubviews
+{
+    [super setupSubviews];
+    self.view.backgroundColor = HYColorBgLight;
+    
+    
 }
 
 
