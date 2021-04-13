@@ -10,7 +10,10 @@
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <objc/runtime.h>
-#import "HYFramework.h"
+#import "UIViewController+HYAlert.h"
+#import "MBProgressHUD+HYAdd.h"
+#import "UIImage+HYAdd.h"
+#import "NSDate+HYAdd.h"
 
 static char photoBlock;
 

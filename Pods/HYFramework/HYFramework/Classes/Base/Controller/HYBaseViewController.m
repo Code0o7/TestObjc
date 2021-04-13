@@ -6,10 +6,12 @@
 //
 
 #import "HYBaseViewController.h"
-#import "HYFramework.h"
+#import "Masonry.h"
+#import "UIViewController+HYNavigation.h"
 
 @interface HYBaseViewController ()
 
+#pragma mark - scrollView
 // 滚动视图
 @property (nonatomic, strong) UIScrollView *scrollView;
 
@@ -17,11 +19,9 @@
 // 注:scrollContentView的高度没有添加约束，需要在内部添加子视图的时候设置约束把scrollContentView撑起来
 @property (nonatomic, strong) UIView *scrollContentView;
 
+#pragma mark - 导航栏相关
 // viewWillAppear记录导航栏状态 viewWillDisappear恢复，防止影响其他控制器显示
 @property (nonatomic, assign) BOOL navOriginHiddenState;
-
-// 返回按钮
-@property (nonatomic, strong) UIBarButtonItem *backButtonItem;
 
 @end
 
@@ -61,12 +61,18 @@
     // 默认白色view
     self.view.backgroundColor = [UIColor whiteColor];
     
+
     // 设置返回按钮
-    if (self.navigationController) {
-        if (self.navigationController.viewControllers.count > 1) {
-            [self.navigationItem setLeftBarButtonItem:self.backButtonItem];
-        }
-    }
+    self.navigationItem.backBarButtonItem = self.backButtonItem;
+//    self.navigationItem.backBarButtonItem = self.backButtonItem;
+//    if (self.navigationController) {
+//        if (self.navigationController.viewControllers.count > 1) {
+//            [self.navigationItem setLeftBarButtonItem:self.backButtonItem];
+//        }
+//    }
+    
+    // 导航栏状态设置
+    self.navigationController.navigationBarHidden = self.navBarHidden;
 }
 
 // 添加scroll(需要的时候主动调用)
@@ -91,19 +97,16 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark - 其他
-// push
-- (void)pushWithCotroller:(UIViewController *)ctr animated:(BOOL)animated
+#pragma mark - setter
+// 设置导航栏显示状态
+- (void)setNavBarHidden:(BOOL)navBarHidden
 {
-    ctr.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:ctr animated:animated];
+    _navBarHidden = navBarHidden;
+    self.navigationController.navigationBarHidden = navBarHidden;
 }
 
-// push
-- (void)pushWithCotroller:(UIViewController *)ctr
-{
-    [self pushWithCotroller:ctr animated:YES];
-}
+#pragma mark - 其他
+
 
 /**
  如果是表单类型控制器，提交前需校验所有内容是否都填写完成
@@ -131,20 +134,6 @@
         _scrollContentView = UIView.new;
     }
     return _scrollContentView;
-}
-
-// 返回按钮
-- (UIBarButtonItem *)backButtonItem
-{
-    if (!_backButtonItem) {
-        UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-        [backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-        UIImageView *backImgV = [[UIImageView alloc]initWithImage:HYImageNamed(@"icon_navigate_back")];
-        backImgV.frame = CGRectMake(0, 10, 13, 21);
-        [backBtn addSubview:backImgV];
-        _backButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    }
-    return _backButtonItem;
 }
 
 

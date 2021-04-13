@@ -42,7 +42,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   HYFramework:
-    :commit: ba1e0962154d97c9fb2b7283d8802850f583517a
+    :commit: 37ed9213a4954b519c4da4fbfe2e59b222ca3126
     :git: https://github.com/MrChenYoung/HYFramework.git
 
 SPEC CHECKSUMS:

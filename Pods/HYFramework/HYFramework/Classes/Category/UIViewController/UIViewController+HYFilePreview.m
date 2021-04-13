@@ -6,7 +6,10 @@
 //
 
 #import "UIViewController+HYFilePreview.h"
-#import "HYFramework.h"
+#import <objc/runtime.h>
+#import "HYConstMacro.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+HYAdd.h"
 
 static char documentControllerKey;
 

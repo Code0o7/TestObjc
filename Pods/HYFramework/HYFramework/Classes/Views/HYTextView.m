@@ -6,7 +6,9 @@
 //
 
 #import "HYTextView.h"
-#import "HYFramework.h"
+#import "Masonry.h"
+#import "HYConstMacro.h"
+#import "NSString+HYAdd.h"
 
 @interface HYTextView ()
 

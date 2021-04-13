@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYFramework.h"
+#import "HYBaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+HYNetwork.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HYBaseViewController : UIViewController
@@ -20,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 注:scrollContentView的高度没有添加约束，需要在内部添加子视图的时候设置约束把scrollContentView撑起来
 @property (nonatomic, strong, readonly) UIView * _Nullable scrollContentView;
 
+#pragma mark - 导航栏相关
+// 是否隐藏导航栏
+@property (nonatomic, assign) BOOL navBarHidden;
+
 #pragma mark - 设置子视图
 // 子视图设置
 - (void)setupSubviews;
@@ -28,11 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addScrollView;
 
 #pragma mark - 其他
-// push
-- (void)pushWithCotroller:(UIViewController *_Nullable)ctr animated:(BOOL)animated;
 
-// push
-- (void)pushWithCotroller:(UIViewController *_Nullable)ctr;
 
 /**
  如果是表单类型控制器，提交前需校验所有内容是否都填写完成

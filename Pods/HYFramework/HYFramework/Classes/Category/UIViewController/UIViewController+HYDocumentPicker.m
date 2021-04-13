@@ -7,7 +7,10 @@
 
 #import "UIViewController+HYDocumentPicker.h"
 #import <objc/runtime.h>
-#import "HYFramework.h"
+#import "UIViewController+HYAlert.h"
+#import "HYDeviceTool.h"
+#import "HYConstMacro.h"
+#import "NSDate+HYAdd.h"
 
 static char filePickerBlock;
 

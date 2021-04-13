@@ -7,7 +7,8 @@
 
 #import "UIViewController+HYBottomBtns.h"
 #import <objc/runtime.h>
-#import "HYFramework.h"
+#import "HYConstMacro.h"
+#import "UIView+HYFrame.h"
 
 static char fviewConst;
 static char bottomBtnActionsConst;

@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HYFramework.h"
+#import "AFNetworking.h"
+#import "HYConstMacro.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

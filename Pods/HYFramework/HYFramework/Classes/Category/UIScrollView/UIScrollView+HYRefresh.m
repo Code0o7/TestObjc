@@ -6,7 +6,7 @@
 //
 
 #import "UIScrollView+HYRefresh.h"
-#import "HYFramework.h"
+#import "MJRefresh.h"
 
 @implementation UIScrollView (HYRefresh)
 
@@ -28,6 +28,7 @@
             block();
         }
     }];
+    footer.automaticallyChangeAlpha = YES;
     self.mj_footer = footer;
 }
 

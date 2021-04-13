@@ -8,6 +8,10 @@
 
 #import "HYFormSegmentView.h"
 #import "HYImageView.h"
+#import "Masonry.h"
+#import "HYConstMacro.h"
+#import "NSString+HYFrame.h"
+#import "UIView+HYSubview.h"
 
 @interface HYFormSegmentView ()
 

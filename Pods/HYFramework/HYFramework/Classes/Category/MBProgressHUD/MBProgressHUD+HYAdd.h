@@ -6,7 +6,7 @@
 //
 
 #import <MBProgressHUD/MBProgressHUD.h>
-#import "HYFramework.h"
+#import "HYConstMacro.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

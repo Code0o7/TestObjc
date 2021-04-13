@@ -7,7 +7,7 @@
 //
 
 #import "HYBaseCustomView.h"
-#import "HYFramework.h"
+#import "HYConstMacro.h"
 
 @interface HYBaseCustomView ()
 

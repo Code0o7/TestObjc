@@ -7,7 +7,13 @@
 
 #import "UIViewController+HYNetwork.h"
 #import <objc/runtime.h>
-#import "HYFramework.h"
+#import "HYConstMacro.h"
+#import "HYAFttpTool.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+HYAdd.h"
+#import "NSString+HYAdd.h"
+#import "JRToast.h"
+#import "YYModel.h"
 
 static char HYRequestCompleteBlockKey;
 static char HYhttpHeaderKey;

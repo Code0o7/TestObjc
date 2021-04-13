@@ -5,9 +5,11 @@
 //  Created by 臻尚 on 2021/4/9.
 //
 
-#import "UIViewController+TableView.h"
+#import "UIViewController+HYTableView.h"
 #import <objc/runtime.h>
-#import "HYFramework.h"
+#import "Masonry.h"
+#import "HYConstMacro.h"
+#import "UIScrollView+HYRefresh.h"
 
 static char HYTableViewPropertyKey;
 static char HYDatasourcePropertyKey;
@@ -15,7 +17,7 @@ static char HYPageIndexPropertyKey;
 static char HYRowHPropertyKey;
 static char HYLoadMoreDataKey;
 
-@implementation UIViewController (TableView)
+@implementation UIViewController (HYTableView)
 
 #pragma mark - 设置子视图
 // 设置tableView

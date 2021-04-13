@@ -6,7 +6,7 @@
 //
 
 #import "UIColor+HYAdd.h"
-#import "HYFramework.h"
+#import "NSString+HYAdd.h"
 
 @implementation UIColor (HYAdd)
 

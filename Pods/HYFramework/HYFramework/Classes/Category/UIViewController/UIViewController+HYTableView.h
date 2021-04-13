@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (TableView)
+@interface UIViewController (HYTableView)
 
 // table
 @property (nonatomic, strong) UITableView *tableView;

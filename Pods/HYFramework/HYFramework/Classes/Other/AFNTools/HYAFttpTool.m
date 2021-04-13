@@ -6,6 +6,13 @@
 //
 
 #import "HYAFttpTool.h"
+#import "HYConstMacro.h"
+#import "HYAPIConfig.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+HYAdd.h"
+#import "NSObject+HYAdd.h"
+#import "HYVideoTool.h"
+#import "NSString+HYAdd.h"
 
 @implementation HYAFHttpClient
 

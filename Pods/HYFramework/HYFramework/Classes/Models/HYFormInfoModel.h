@@ -9,7 +9,8 @@
 /**
  本类功能: 表单页面分块创建view，该model存储每一块的信息
  */
-#import "HYFramework.h"
+#import "HYFormInfoModel.h"
+#import "HYBaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
