@@ -15,6 +15,7 @@
 		2E4FF5D426244DD000506169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4FF5D326244DD000506169 /* Assets.xcassets */; };
 		2E4FF5D726244DD000506169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4FF5D526244DD000506169 /* LaunchScreen.storyboard */; };
 		2E4FF5DA26244DD000506169 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FF5D926244DD000506169 /* main.m */; };
+		2E8BEC0A263A4B3B00425F75 /* AnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BEC09263A4B3B00425F75 /* AnimationTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		2E4FF5D626244DD000506169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E4FF5D826244DD000506169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E4FF5D926244DD000506169 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E8BEC08263A4B3B00425F75 /* AnimationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationTool.h; sourceTree = "<group>"; };
+		2E8BEC09263A4B3B00425F75 /* AnimationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationTool.m; sourceTree = "<group>"; };
 		45ECBBA55E23BE3448316111 /* Pods-TestObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestObjc.release.xcconfig"; path = "Target Support Files/Pods-TestObjc/Pods-TestObjc.release.xcconfig"; sourceTree = "<group>"; };
 		90077BF93BA2BFEACA6FB918 /* Pods_TestObjc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestObjc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +77,8 @@
 				2E4FF5CB26244DCF00506169 /* SceneDelegate.m */,
 				2E4FF5CD26244DCF00506169 /* ViewController.h */,
 				2E4FF5CE26244DCF00506169 /* ViewController.m */,
+				2E8BEC08263A4B3B00425F75 /* AnimationTool.h */,
+				2E8BEC09263A4B3B00425F75 /* AnimationTool.m */,
 				2E4FF5D026244DCF00506169 /* Main.storyboard */,
 				2E4FF5D326244DD000506169 /* Assets.xcassets */,
 				2E4FF5D526244DD000506169 /* LaunchScreen.storyboard */,
@@ -213,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8BEC0A263A4B3B00425F75 /* AnimationTool.m in Sources */,
 				2E4FF5CF26244DCF00506169 /* ViewController.m in Sources */,
 				2E4FF5C926244DCF00506169 /* AppDelegate.m in Sources */,
 				2E4FF5DA26244DD000506169 /* main.m in Sources */,

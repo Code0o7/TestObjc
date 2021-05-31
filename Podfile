@@ -1,8 +1,8 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/MrChenYoung/HYPodSpec.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/MrChenYoung/HYPodSpec.git'
 
 target 'TestObjc' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -12,7 +12,9 @@ target 'TestObjc' do
 
 #pod 'HYFramework', :git => 'https://github.com/MrChenYoung/HYFramework.git'
 
-pod 'ZLPhotoBrowser', '3.2.0'
+#pod 'ZLPhotoBrowser', '3.2.0'
 #pod 'ZLPhotoBrowser'
+
+pod 'HYTestPods'
 
 end
