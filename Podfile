@@ -7,6 +7,7 @@ target 'TestObjc' do
 
   # Pods for TestObjc
 
-pod 'HYFramework', :git => 'https://github.com/MrChenYoung/HYFramework.git'
+# pod 'HYFramework', :git => 'https://github.com/MrChenYoung/HYFramework.git'
+pod 'HYTestPod', :git => 'https://github.com/MrChenYoung/HYTestPod.git'
 
 end
