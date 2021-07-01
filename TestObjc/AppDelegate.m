@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import <JVERIFICATIONService.h>
 
 @interface AppDelegate ()
 

@@ -1,6 +1,0 @@
-framework module HYTestPod {
-  umbrella header "HYTestPod-umbrella.h"
-
-  export *
-  module * { export * }
-}

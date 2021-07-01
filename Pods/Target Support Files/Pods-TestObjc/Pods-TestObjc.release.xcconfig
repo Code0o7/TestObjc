@@ -1,9 +1,10 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HYTestPod"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_ROOT}/JVerification"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HYTestPod/HYTestPod.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/JVerification"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "HYTestPod"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/JCore" "${PODS_ROOT}/JVerification"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++.1" -l"jcore-ios-2.7.1" -l"jverification-ios-2.7.2" -l"resolv" -l"sqlite3.0" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreAudio" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "EAccountApiSDK" -framework "ESOneKeyLogin" -framework "Foundation" -framework "Masonry" -framework "MobileCoreServices" -framework "OAuth" -framework "Security" -framework "SystemConfiguration" -framework "TYRZUISDK" -framework "UIKit" -framework "WebKit" -framework "account_login_sdk_noui_core" -weak_framework "AppTrackingTransparency" -weak_framework "UserNotifications"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

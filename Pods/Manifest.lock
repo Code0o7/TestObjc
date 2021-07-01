@@ -1,21 +1,24 @@
 PODS:
-  - HYTestPod (0.1.0)
+  - JCore (2.7.1)
+  - JVerification (2.7.2):
+    - JCore (< 6.0.0, >= 2.1.6)
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
-  - HYTestPod (from `https://github.com/MrChenYoung/HYTestPod.git`)
+  - JVerification
+  - Masonry
 
-EXTERNAL SOURCES:
-  HYTestPod:
-    :git: https://github.com/MrChenYoung/HYTestPod.git
-
-CHECKOUT OPTIONS:
-  HYTestPod:
-    :commit: 6e1672a1dad62c8c34329398a038c04a5134081d
-    :git: https://github.com/MrChenYoung/HYTestPod.git
+SPEC REPOS:
+  trunk:
+    - JCore
+    - JVerification
+    - Masonry
 
 SPEC CHECKSUMS:
-  HYTestPod: 06cef55d1adc3dadd56dbc389123c7284206d905
+  JCore: 9d5bda3a172c65bbe14f2806ab0f6246f8a06065
+  JVerification: ae46f4b45367d734106cd4166ee35332486348cc
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 58fdcb5b797ef8568ef672c1921b66dd48ac58d2
+PODFILE CHECKSUM: 04b4a2a121455dc937cc92a1a9826f59ac2f4d79
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

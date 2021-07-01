@@ -6,11 +6,10 @@
 //
 
 #import "ViewController.h"
-#import <MJRefresh.h>
+#import "TestViewController.h"
+#import <Masonry.h>
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic, strong) UITableView *tableView;
+@interface ViewController ()<UITableViewDataSource>
 
 @end
 
@@ -18,33 +17,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+//    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+//    tableView.dataSource = self;
+//    tableView.dataSource = self.dataSource;
+//    [self.view addSubview:tableView];
+//    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
+    
 }
 
-- (void)setupSubviews
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [super setupSubviews];
-    self.view.backgroundColor = HYColorBgLight;
-    
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    self.tableView.tableFooterView = UIView.new;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = HYColorBgLight;
-    // 分割线颜色
-    self.tableView.separatorColor = HYColorRGB(231, 231, 231);
-    [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
-    self.tableView.mj_footer = footer;
-    [footer setTitle:@"" forState:MJRefreshStateIdle];
-    footer.arrowView.image = nil;
+    TestViewController *testCtr = [[TestViewController alloc]init];
+    [self.navigationController pushViewController:testCtr animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 10;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    
+    return cell;
+}
 
 @end

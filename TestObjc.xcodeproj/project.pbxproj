@@ -15,6 +15,8 @@
 		2E4FF5D426244DD000506169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4FF5D326244DD000506169 /* Assets.xcassets */; };
 		2E4FF5D726244DD000506169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4FF5D526244DD000506169 /* LaunchScreen.storyboard */; };
 		2E4FF5DA26244DD000506169 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FF5D926244DD000506169 /* main.m */; };
+		FF9378A3268C770300860A2C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9378A2268C770300860A2C /* TestViewController.m */; };
+		FF9378A6268D6A4200860A2C /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9378A5268D6A4200860A2C /* WeakProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		2E4FF5D926244DD000506169 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		45ECBBA55E23BE3448316111 /* Pods-TestObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestObjc.release.xcconfig"; path = "Target Support Files/Pods-TestObjc/Pods-TestObjc.release.xcconfig"; sourceTree = "<group>"; };
 		90077BF93BA2BFEACA6FB918 /* Pods_TestObjc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestObjc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9378A1268C770300860A2C /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		FF9378A2268C770300860A2C /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		FF9378A4268D6A4200860A2C /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		FF9378A5268D6A4200860A2C /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 				2E4FF5CB26244DCF00506169 /* SceneDelegate.m */,
 				2E4FF5CD26244DCF00506169 /* ViewController.h */,
 				2E4FF5CE26244DCF00506169 /* ViewController.m */,
+				FF9378A1268C770300860A2C /* TestViewController.h */,
+				FF9378A2268C770300860A2C /* TestViewController.m */,
+				FF9378A4268D6A4200860A2C /* WeakProxy.h */,
+				FF9378A5268D6A4200860A2C /* WeakProxy.m */,
 				2E4FF5D026244DCF00506169 /* Main.storyboard */,
 				2E4FF5D326244DD000506169 /* Assets.xcassets */,
 				2E4FF5D526244DD000506169 /* LaunchScreen.storyboard */,
@@ -111,7 +121,7 @@
 				2E4FF5C026244DCF00506169 /* Sources */,
 				2E4FF5C126244DCF00506169 /* Frameworks */,
 				2E4FF5C226244DCF00506169 /* Resources */,
-				B6AF2CE2BC243A20CE9D3D30 /* [CP] Embed Pods Frameworks */,
+				B289F13588C4737C5339504B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,7 +199,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B6AF2CE2BC243A20CE9D3D30 /* [CP] Embed Pods Frameworks */ = {
+		B289F13588C4737C5339504B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -215,8 +225,10 @@
 			files = (
 				2E4FF5CF26244DCF00506169 /* ViewController.m in Sources */,
 				2E4FF5C926244DCF00506169 /* AppDelegate.m in Sources */,
+				FF9378A6268D6A4200860A2C /* WeakProxy.m in Sources */,
 				2E4FF5DA26244DD000506169 /* main.m in Sources */,
 				2E4FF5CC26244DCF00506169 /* SceneDelegate.m in Sources */,
+				FF9378A3268C770300860A2C /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8M66PS8VC3;
 				INFOPLIST_FILE = TestObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,6 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8M66PS8VC3;
 				INFOPLIST_FILE = TestObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
